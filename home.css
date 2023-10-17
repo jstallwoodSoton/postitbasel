@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --c1: #35e2c3; 	
+	--c2: #14d0f0; 	
+	--c3: #7f73ff; 	
+	--c4: #ff83c3; 	
+	--c5: #ffe552;
+
+    --roboto: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(
+        to bottom,
+        var(--c1) 20%,
+        var(--c2) 45%,
+        var(--c3) 70%,
+        var(--c4) 85%,
+        var(--c5) 100%
+    );
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 95vh;
+    margin: 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    height: 5vh;
+    margin: 1vmin;
+    justify-content: end;
+}
+
+.footer p {
+    font-family: var(--roboto);
+    font-size: 1vmin;
+}
+
+.sub-box {
+    width: 50%;
+    height: 90%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1%;
+}
+
+.sub-box img {
+    align-self: flex-start;
+    margin: 5%;
+}
+
+.sub-box h2 {
+    font-family: var(--roboto);
+}
+
+.row-box {
+    width: 90%;
+    height: 30%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+.postit {
+    height: 90%;
+    width: 30%;
+    background-color: var(--c4);
+    display: flex;  
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    user-select: none;
+}
+
+.postit[data-int="true"]:hover {
+    width: 32%;
+    height: 92%;
+    border: 5px solid var(--c3);
+    transition: 0.25s linear;
+    cursor: pointer;
+}
+
+.postit h1, .postit h2 {
+    font-family: var(--roboto);
+    font-weight: 700;
+}
+
+.postit h1 {
+    font-size: 4vmin;
+}
+
+.postit h2 {
+    font-size: 2vmin;
+}
+
+.postit[data-col="def"] {
+    background-color: var(--c2);
+}
+
+.postit[data-col="proof"] {
+    background-color: var(--c4);
+}
+
+.postit[data-col="app"] {
+    background-color: var(--c5);
+}
+
+.postit[data-col="exp"] {
+    background-color: var(--c1);
+}
+
+
+.large-postit {
+    height: 90%;
+    width: 80%;
+    background-color: var(--c3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.large-postit p {
+    font-family: var(--roboto);
+    font-size: 2vmin;
+}
+
+.large-postit img {
+    width: 30%;
+    align-self: center;
+}
+
+.large-postit .MJX-TEX {
+    font-size: 2.5vmin;
+}
+
+.large-postit:hover {
+    animation: wiggle 1s linear;
+}
+
+@keyframes wiggle {
+    0%, 50%, 100% {rotate: 0deg;}
+    10%, 40% {rotate: -1deg;}
+    20%, 30% {rotate: -2deg;}
+    60%, 90% {rotate: 1deg;}
+    70%, 80% {rotate: 2deg;}
+}

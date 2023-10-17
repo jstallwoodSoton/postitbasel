@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="./homepostit.js"></script>
+        <link rel="stylesheet" href="./home.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="sub-box">
+                <img src="./img/pp.png">
+                <div class="row-box">
+                    <div class="postit" onclick="changeDisplay(0, 'def')" data-int="true" data-col="def">
+                        <h2>Basel Problem</h2>
+                        <h1>Solution</h1>
+                    </div>
+                    <div class="postit" onclick="changeDisplay(1, 'exp')" data-int="true" data-col="exp">
+                        <h2>Basel Problem</h2>
+                        <h1>Explanation</h1>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="postit" onclick="changeDisplay(2, 'proof')" data-int="true">
+                        <h2>Basel Problem</h2>
+                        <h1>1</h1>
+                    </div>
+                    <div class="postit" onclick="changeDisplay(3, 'proof')" data-int="true">
+                        <h2>Basel Problem</h2>
+                        <h1>2</h1>
+                    </div>
+                    <div class="postit" onclick="changeDisplay(4, 'proof')" data-int="true">
+                        <h2>Basel Problem</h2>
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="postit" data-col="def">
+                        <h2>Definition</h2>
+                    </div>
+                    <div class="postit">
+                        <h2>Proof</h2>
+                    </div>
+                    <div class="postit" data-col="app">
+                        <h2>Application</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-box">
+                <div class="large-postit" id="postit-post">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Dr James Stallwood, School of Mathematical Sciences, University of Southampton, UK., 2023</p>
+        </div>
+    </body>
+</html>
